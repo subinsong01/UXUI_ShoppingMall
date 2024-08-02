@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U+SINSA</title>
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+  <!--header-->
+	<div id="header">
+		<h1 class="logo">
+			<a href="#">
+        <img src="logo.svg" alt="로고이미지">
+      </a>
+		</h1>
+    <ul id="nav">
+      <li class="dept1">
+          <a href="#">WOMEN</a>
+          <ul class="inner_menu">
+              <li class="dept2"><a href="#">신상품</a></li>
+              <li class="dept2"><a href="#">모두보기</a></li>
+              <li class="dept2"><a href="#">의류</a></li>
+              <li class="dept2"><a href="#">드레스</a></li>
+              <li class="dept2"><a href="#">슈즈 & 악세서리</a></li>
+          </ul>
+      </li>
+      <li class="dept1">
+          <a href="#">MEN</a>
+          <ul class="inner_menu">
+              <li class="dept2"><a href="#">신상품</a></li>
+              <li class="dept2"><a href="#">모두보기</a></li>
+              <li class="dept2"><a href="#">의류</a></li>
+              <li class="dept2"><a href="#">슈즈 & 악세서리</a></li>
+              <li class="dept2">ㅤ</li>
+          </ul>
+      </li>
+      <li class="dept1">
+          <a href="#">BEAUTY</a>
+          <ul class="inner_menu">
+              <li class="dept2"><a href="#">신상품</a></li>
+              <li class="dept2"><a href="#">스킨케어</a></li>
+              <li class="dept2"><a href="#">메이크업</a></li>
+              <li class="dept2"><a href="#">헤어 & 바디</a></li>
+              <li class="dept2">ㅤ</li>
+          </ul>
+      </li>
+      <li class="dept1">
+          <a href="#">SPORTS</a>
+          <ul class="inner_menu">
+              <li class="dept2"><a href="#">신상품</a></li>
+              <li class="dept2"><a href="#">러닝</a></li>
+              <li class="dept2"><a href="#">운동화</a></li>
+              <li class="dept2"><a href="#">수영복</a></li>
+              <li class="dept2">ㅤ</li>
+          </ul>
+      </li>
+      <li class="dept1">
+          <a href="#">SALE</a>
+          <ul class="inner_menu">
+              <li class="dept2"><a href="#">All Sales</a></li>
+              <li class="dept2"><a href="#">Womens Sale</a></li>
+              <li class="dept2"><a href="#">Mens Sale</a></li>
+              <li class="dept2"><a href="#">Beauty Sale</a></li>
+              <li class="dept2"><a href="#">Sports Sale</a></li>
+          </ul>
+      </li>
+  </ul>
+	</div>
+	<!--//header-->
+
+	<div class="body">
+
+	</div>
+
+  <!-- header script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
+  <script type="text/javascript">
+      $(document).ready(function() {
+			var nav = $('#nav');
+
+			// 마우스 over 시
+			nav.mouseenter(function() {
+				$('.inner_menu').stop(true,true).slideDown();
+      });
+
+			// 마우스  leave 시
+			nav.mouseleave(function() {
+				$('.inner_menu').slideUp();
+			});
+
+			//dept2 hover시 dept1 active
+			$('.dept1').mouseenter(function() {
+				$(this).children().addClass('active');
+				$(this).siblings().children().removeClass('active')
+			});
+			$('.dept1').mouseleave(function() {
+				$(this).children().removeClass('active');
+			});
+			
+		});
+  </script>
+  <!-- //header script -->
+</body>
+
+</html>
